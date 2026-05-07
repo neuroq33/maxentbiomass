@@ -39,21 +39,3 @@ plt.grid(alpha=0.3)
 plt.savefig('fig_power1.pdf', bbox_inches='tight')
 plt.close()
 print("Figura de potencia guardada: fig_power.pdf")
-print("Advertencia: El CSV no contiene columna 'BiasK'. No se puede generar la figura de sesgo de k̂.")
-print("Si tienes acceso a los datos de simulación completos, calcula BiasK = (k_est - k_teo)/k_teo.")
-print("Se omite la figura de sesgo de k̂ por ahora. Se puede añadir después.")
-
-# Opcional: si quisieras generar una figura de ejemplo (no válida), descomentar:
-# # Sesgo simulado de ejemplo (solo para ilustrar)
-# N_vals = [100, 250, 500, 1000, 2000, 5000]
-# bias_k_sturges = [-0.15, -0.10, -0.06, -0.04, -0.02, -0.01]
-# bias_k_fd = [-0.12, -0.08, -0.05, -0.03, -0.01, -0.005]
-# plt.figure()
-# plt.plot(N_vals, bias_k_sturges, 'o-', label='Sturges')
-# plt.plot(N_vals, bias_k_fd, 's-', label='Freedman-Diaconis')
-# plt.xlabel('N')
-# plt.ylabel('Relative bias in k̂')
-# plt.title('Figure: Bias in estimated Shannon index (example)')
-# plt.legend()
-# plt.grid()
-# plt.savefig('fig_bias_k.pdf')
