@@ -36,22 +36,9 @@ plt.ylabel('True Positive Rate (power)')
 plt.title('Figure: Statistical power for exponential data')
 plt.legend()
 plt.grid(alpha=0.3)
-plt.savefig('fig_power.pdf', bbox_inches='tight')
+plt.savefig('fig_power1.pdf', bbox_inches='tight')
 plt.close()
 print("Figura de potencia guardada: fig_power.pdf")
-
-# ============================================================================
-# Figura de sesgo en k̂ (Shannon index)
-# Nota: El CSV no incluye BiasK. Si se tuviera, se usaría algo similar a:
-# df_bias_k = df[df['Distribution'] == 'exponential']
-# Para no dejar el manuscrito sin esta figura, generamos una figura de ejemplo
-# con valores simulados (basados en la literatura) o simplemente indicamos
-# que se requiere calcular a partir de los datos crudos.
-# En su lugar, generamos una figura de sesgo en β̂ ya existente (Figura 2)
-# como recordatorio, pero para k̂ se puede añadir un panel o figura separada.
-# Como el manuscrito ya tiene Figura 2 con sesgo en β̂, y la corrección pedía
-# también sesgo en k̂, aquí creamos una figura con datos sintéticos razonables.
-# Para un trabajo real, deberías haber guardado el BiasK durante la simulación.
 print("Advertencia: El CSV no contiene columna 'BiasK'. No se puede generar la figura de sesgo de k̂.")
 print("Si tienes acceso a los datos de simulación completos, calcula BiasK = (k_est - k_teo)/k_teo.")
 print("Se omite la figura de sesgo de k̂ por ahora. Se puede añadir después.")
